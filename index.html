@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <main class="dashboard-container">
+        <section class="side-menu-section">
+            <div class="toggle-btn-container">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="side-menu-items">
+                <ul>
+                    <li> 
+                        <a href="#" id="personal-section-btn" onclick="redirect1();">
+                            <ion-icon name="grid"></ion-icon>
+                            <span class="hide1 displayNone">Personal Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="upload-section-btn" onclick="redirect2();">
+                            <ion-icon name="calendar-clear-outline"></ion-icon>
+                            <span class="hide2 displayNone">Uploads</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="payment-section-btn" onclick="redirect3();">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                            <span class="hide3 displayNone">Payment Info</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            <span class="hide4 displayNone">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logout-btn">
+                <a href="#">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <span class="hide5 displayNone">Logout</span>
+                </a>
+            </div>  
+        </section>
+        <section class="details-section">
+            <div class="details">
+                <div class="details-main" id="personal-details">
+                    <h1>Personal Details</h1>
+                    <div class="details-container">
+                        <!-- <div class="detail-item">
+                            <span class="detail-item-heading">Name</span>
+                            <span class="detail-item-value">Akash Gowda</span>
+                        </div> -->
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Mobile</span>
+                            <span class="detail-item-value">9019982964</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Alternate Mobile</span>
+                            <span class="detail-item-value">9019982964</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Address</span>
+                            <span class="detail-item-value">Ramnagara, Karnataka</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Email</span>
+                            <span class="detail-item-value">aks@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Postal Code</span>
+                            <span class="detail-item-value">562159</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Emergency Number</span>
+                            <span class="detail-item-value">9019982964</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Occupation</span>
+                            <span class="detail-item-value">Handicrafts</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Experience</span>
+                            <span class="detail-item-value">5 years</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Date of Birth</span>
+                            <span class="detail-item-value">09-12-1989</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-heading">Adhar Number</span>
+                            <span class="detail-item-value">0997 6543 2109</span>
+                        </div>
+                        <!-- <div class="detail-item">
+                            <span class="detail-item-heading">Pan Number</span>
+                            <span class="detail-item-value">CFJP0882</span>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="upload-section displayNone" id="upload">
+                    <h1>Uploads</h1>
+                    <form action="#" name="form1">
+                        <div class="upload-form-items">
+                            <label>Adhar Card</label>
+                            <input class="adhar-card" type="file">
+                        </div>
+            
+                        <div class="upload-form-items">
+                            <label>Pan card</label>
+                            <input class="pan-card" type="file">
+                        </div>
+            
+                        <div class="upload-form-items">
+                            <label>Photo</label>
+                            <input class="photo" type="file">
+                        </div>
+            
+                        <div class="upload-form-items">
+                            <label>Achievement</label>
+                            <input class="branch" type="file">
+                        </div>
+
+                        <div class="upload-form-items">
+                            <label>Cancel Cheque</label>
+                            <input class="adhar-card" type="file">
+                        </div>
+                        
+                        <div class="submit">
+                            <button type="submit" class="end">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="payment-info-section displayNone" id="payment-info">
+                    <h1>Payment Info</h1>
+                    <form action="#" onsubmit="return validation();" name="form2">
+                        <div class="payment-info-form-items">
+                            <label id="bank_name">Bank Name</label>
+                            <input class="bank_name" type="text" placeholder=""  name="bank_name" id="bank_name">
+                        </div>
+            
+                        <div class="payment-info-form-items">
+                            <label for="acc_no">Account Number</label>
+                            <input class="acc_no" type="text" placeholder="" maxlength="17" minlength="5"  name="acc_no" id="acc_no">
+                        </div>
+            
+                        <div class="payment-info-form-items">
+                            <label for="hold_name">Holder Name</label>
+                            <input class="hold_name" type="text" placeholder=""  name="hold_name" id="hold_name">
+                        </div>
+            
+                        <div class="payment-info-form-items">
+                            <label for="branch">Branch Name</label>
+                            <input class="branch" type="text"  name="branch" id="branch" placeholder="">
+                        </div>
+            
+                        <div class="payment-info-form-items">
+                            <label for="adhar">Adharcard No.</label>
+                            <input class="adhar" type="text" name="adhar" id="adhar" placeholder="">
+                        </div>
+                       
+                        <div class="payment-info-form-items">
+                            <label for="ifsc">IFSC Code</label>
+                            <input class="ifsc" type="text" name="ifsc" id="ifsc" placeholder="" maxlength="11" minlength="11">
+                        </div>
+            
+                        <div class="payment-info-form-items">
+                            <label for="micr">MICR Code</label>
+                            <input class="micr" type="text" name="micr" id="micr" placeholder="" maxlength="9" minlength="9">
+                        </div>
+
+                        <div class="submit">
+                            <button type="submit" class="end">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="artist-profile">
+                    <img src="Images/artistprofile.jpg" alt="Profile Pic">
+                    <h2 class="name">Akash Gowda</h2>
+                    <p class="occupation">Handicrafts</p>
+                    <hr>
+                    <div class="notification-container">
+                        <span>Notifications</span>
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Js -->
+    <script src="index.js"></script>
+
+    <!-- Icon CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
